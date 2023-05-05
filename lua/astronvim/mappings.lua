@@ -6,6 +6,7 @@ local maps = { i = {}, n = {}, v = {}, t = {} }
 
 local sections = {
   f = { desc = "󰍉 Find" },
+  F = { desc = "󰅨 Flutter" },
   p = { desc = "󰏖 Packages" },
   l = { desc = " LSP" },
   u = { desc = " UI" },
@@ -19,6 +20,10 @@ local sections = {
 if not vim.g.icons_enabled then vim.tbl_map(function(opts) opts.desc = opts.desc:gsub("^.* ", "") end, sections) end
 
 -- Normal --
+
+-- Flutter
+maps.n["<leader>F"] = sections.F
+
 -- Standard Operations
 maps.n["j"] = { "v:count == 0 || mode(1)[0:1] == 'no' ? 'j' : 'gj'", expr = true, desc = "Move cursor down" }
 maps.n["k"] = { "v:count == 0 || mode(1)[0:1] == 'no' ? 'k' : 'gk'", expr = true, desc = "Move cursor up" }
