@@ -123,5 +123,5 @@ return {
       },
     },
   },
-  config = function() require("neo-tree").setup(astronvim.user_opts "neotree") end,
+  config = function() require("neo-tree").setup(astronvim.user_opts("neotree")) end,
 }
