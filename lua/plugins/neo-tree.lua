@@ -133,6 +133,7 @@ return {
         follow_current_file = { enabled = true },
         hijack_netrw_behavior = "open_current",
         use_libuv_file_watcher = true,
+        group_empty_dirs = true,
       },
       event_handlers = {
         {
@@ -142,5 +143,5 @@ return {
       },
     }
   end,
-  config = function() require("neo-tree").setup(astronvim.user_opts("neotree")) end,
+  config = function() require("neo-tree").setup(astronvim.user_opts "neotree") end,
 }

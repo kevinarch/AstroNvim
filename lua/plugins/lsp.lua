@@ -51,7 +51,7 @@ return {
       if require("astronvim.utils").is_available "neoconf.nvim" then table.insert(cmds, "Neoconf") end
     end,
     event = "User AstroFile",
-    config = require "plugins.configs.lspconfig",
+    config = function() require "plugins.configs.lspconfig" end,
   },
   {
     "jose-elias-alvarez/null-ls.nvim",
